@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Poppins:wght@500&display=swap');
+
+:root {
+            /* Log in */
+        /* Colors */
+    --background-main : #F8F8F8;
+    --button-log: #171645;
+    --input-and-button: #DADAF2;
+
+        /* Fonts */
+    --family1: 'Merriweather', serif;
+    --family2: 'Poppins', sans-serif;
+
+    /* Body size */
+    --size-paragraph: 18px;
+    --size-title: 32px;
+
+
+            /* Sing up */
+}
+
