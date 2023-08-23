@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login of User</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://accounts.google.com/gsi/client" onload="initClient()" async defer></script>
 </head>
 <body>
     <main>
@@ -19,7 +20,7 @@
             </div>
             <p class="or">OR</p>
             <div class="dates_alternatives">
-                <button class="optionGoogle"><img src="" alt="Google">Continue with Google</button>
+                <button class="optionGoogle" onclick="getToken();"><img src="" alt="Google">Continue with Google</button>
                 <button class="optionMicrosoft"><img src="" alt="Microsoft">Continue with Microsoft</button>
                 <button class="optionApple"><img src="" alt="Apple">Continue with Apple</button>
             </div>
@@ -27,5 +28,7 @@
         <p class="alternative">Can't log in? <li>Already have an account?</li></p>
     </main>
     <script src="./login.js"></script>
+    <!-- <button onclick="revokeToken();">Revoke token</button> -->
+    </script>
 </body>
 </html>
