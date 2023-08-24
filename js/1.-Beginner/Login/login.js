@@ -3,8 +3,11 @@ const inputEmail = document.querySelector('.inputEmail'),
 
     inputPass = document.querySelector('.inputPass'),
     passError = document.querySelector('.Passerror'),
-    logInBtn = document.querySelector('.logIn')
 
+    logInBtn = document.querySelector('.logIn'),
+
+    // Button to connect with signUp.html
+    signUp = document.querySelector('span')
 
 const dates = {
     name: 'admin',
@@ -32,6 +35,7 @@ logInBtn.addEventListener('click', information => {
     if (inputEmail.value === dates.email && inputPass.value === dates.pass) window.location.href = 'https://www.google.com';
 });
 
+// Access with Google
 
 var client;
 var access_token;
@@ -43,7 +47,7 @@ function initClient() {
             https://www.googleapis.com/auth/contacts.readonly ',
     callback: (tokenResponse) => {
         access_token = tokenResponse.access_token;
-        // window.location.href = 'https://www.google.com';
+        window.location.href = 'https://www.google.com';
     },
     });
 }
@@ -54,3 +58,10 @@ function getToken() {
 // function revokeToken() {
 //     google.accounts.oauth2.revoke(access_token, () => {console.log('access token revoked')});
 // }
+
+
+// Connect with signUp.html
+signUp.addEventListener('click', redirect => {
+    // Redirect to signUp.html
+    window.location.href = 'https://erick150-ymf.github.io/PracticasJs/js/1.-Beginner/SignUp/signUp.html';
+});

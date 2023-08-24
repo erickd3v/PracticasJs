@@ -12,10 +12,175 @@
     --family2: 'Poppins', sans-serif;
 
     /* Body size */
-    --size-paragraph: 18px;
-    --size-title: 32px;
+    --size-paragraph: 14px;
+    --size-title: 26px;
 
 
             /* Sing up */
 }
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-size: var(--size-paragraph);
+    font-family: var(--family2);
+    display: flex;
+    place-content: center;
+    place-items: center;
+    background: var(--background-main);
+}
+
+main {
+    width: 337.5px;
+    background: #FFFF;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+    gap: 18px;
+    padding: 42px 0;
+    border-radius: 12px;
+    box-shadow: 0px 24px 73px 0px rgba(23, 22, 69, 0.08);
+}
+
+.title {
+    font-family: var(--family1);
+    font-size: var(--size-title);
+}
+
+.dates {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 310px;
+    height: 400px;
+    align-items: center;
+}
+
+.dates_insert, .or, .dates_alternatives {
+    width: 80%;
+    height: 40%;
+}
+
+.dates_insert, .dates_alternatives {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dates_insert {
+    height: 46%;
+}
+
+.email, .pass {
+    height: 61.33px;
+}
+
+.inputEmail, .inputPass, .logIn {
+    height: 49.33px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--input-and-button);
+    background:  #F8F8FB;
+    font-family: var(--family2);
+    opacity: 60%;
+}
+
+.inputEmail::placeholder, .inputPass::placeholder {
+    color: var(--button-log);
+    font-size: var(--size-paragraph);
+}
+
+.inputEmail, .inputPass{
+    padding-left: 24px;
+}
+
+.Emailerror, .Passerror {
+    font-size: 8px;
+    text-align: start;
+    color: red;
+}
+
+.logIn {
+    background: var(--button-log);
+    color: #FFFF;
+    font-size: var(--size-paragraph);
+    border: 1px solid var(--button-log);
+    opacity: 1;
+}
+
+.logIn:hover {
+    cursor: pointer;
+    background-color: #171645dc;
+    transition: all 0.3s;
+}
+
+.optionGoogle:hover, .optionApple:hover, .optionMicrosoft:hover {
+    cursor: pointer;
+    background-color: #cfcfcf;
+    transition: all 0.3s;
+}
+
+.or {
+    width: 27px;
+    height: 20px;
+    text-align: center;
+    margin: 0 auto;
+    color: var(--button-log);
+    opacity: 50%;
+}
+
+.optionGoogle, .optionMicrosoft, .optionApple {
+    height: 75px;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    gap: 0.5em;
+    border-radius: 4px;
+    background:  #F8F8FB;
+    border: 1px solid var(--input-and-button);
+    font-family: var(--family2);
+    font-weight: 500;
+}
+
+img {
+    width: 7.5%;
+}
+
+.p {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--button-log);
+    font-size: 11px;
+}
+
+.p_text {
+    display: flex;
+}
+
+.p_text:hover {
+    cursor: pointer;
+}
+
+span {
+    border-bottom: 1px solid transparent;
+}
+
+span:hover {
+    border-bottom: 1px solid;
+    transition: all 0.3s;
+}
+
+li {
+    padding-left: 10px;
+    width: 1.8em;
+} 
