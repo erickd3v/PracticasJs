@@ -10,7 +10,7 @@ const msalConfig = {
         // Full directory URL, in the form of https://login.microsoftonline.com/<tenant-id>
         authority: "https://login.microsoftonline.com/common",
         // Full redirect URL, in form of http://localhost:3000
-        redirectUri: "http://localhost:5500/js/1.-Beginner/Login/index.html",
+        redirectUri: "https://erick150-ymf.github.io/PracticasJs/js/1.-Beginner/Login/index.html",
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
