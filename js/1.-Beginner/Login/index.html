@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login of User</title>
     <link rel="stylesheet" href="./style.css">
+
+    <script type="text/javascript" src="https://alcdn.msauth.net/browser/2.30.0/js/msal-browser.js" integrity= "sha384-o4ufwq3oKqc7IoCcR08YtZXmgOljhTggRwxP2CLbSqeXGtitAxwYaUln/05nJjit" crossorigin="anonymous"></script>
+    
     <script src="https://accounts.google.com/gsi/client" onload="initClient()" async defer></script>
 </head>
 <body>
@@ -25,7 +28,7 @@
             <p class="or">OR</p>
             <div class="dates_alternatives">
                 <button class="optionGoogle" onclick="getToken();"><img src="./svg/google.svg" alt="Google">Continue with Google</button>
-                <button class="optionMicrosoft"><img src="./svg/microsoft.svg" alt="Microsoft">Continue with Microsoft</button>
+                <button class="optionMicrosoft" onclick="signIn()"><img src="./svg/microsoft.svg" alt="Microsoft">Continue with Microsoft</button>
                 <button class="optionApple"><img src="./svg/apple.svg" alt="Apple">Continue with Apple</button>
             </div>
         </div>
@@ -37,6 +40,12 @@
     </main>
     <script src="./login.js"></script>
     <!-- <button onclick="revokeToken();">Revoke token</button> -->
-    </script>
+
+        <!-- importing app scripts (load order is important) -->
+    <script type="text/javascript" src="./authConfig.js"></script>
+    <script type="text/javascript" src="./graphConfig.js"></script>
+    <!-- <script type="text/javascript" src="./ui.js"></script> -->
+    <script type="text/javascript" src="./authPopup.js"></script>
+    <script type="text/javascript" src="./graph.js"></script>
 </body>
 </html>

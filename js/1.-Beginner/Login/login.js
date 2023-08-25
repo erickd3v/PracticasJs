@@ -7,7 +7,10 @@ const inputEmail = document.querySelector('.inputEmail'),
     logInBtn = document.querySelector('.logIn'),
 
     // Button to connect with signUp.html
-    signUp = document.querySelector('span')
+    signUp = document.querySelector('span'),
+
+    // Apple
+    apple = document.querySelector('.optionApple')
 
 const dates = {
     name: 'admin',
@@ -45,7 +48,8 @@ function initClient() {
     client_id: '68186849727-apbp5270u9o4ji6uk5nsiv1pji0o5o32.apps.googleusercontent.com',
     scope: 'https://www.googleapis.com/auth/calendar.readonly \
             https://www.googleapis.com/auth/contacts.readonly ',
-    callback: (tokenResponse) => {
+            // https://www.googleapis.com/auth/userinfo.profile',
+    callback: (tokenResponse, profile) => {
         access_token = tokenResponse.access_token;
         window.location.href = 'https://www.google.com';
     },
@@ -59,9 +63,19 @@ function getToken() {
 //     google.accounts.oauth2.revoke(access_token, () => {console.log('access token revoked')});
 // }
 
-
 // Connect with signUp.html
 signUp.addEventListener('click', redirect => {
     // Redirect to signUp.html
     window.location.href = 'https://erick150-ymf.github.io/PracticasJs/js/1.-Beginner/SignUp/signUp.html';
 });
+
+
+
+// Access with Apple
+
+apple.addEventListener('click', errormsg => {
+    alert(`
+Sorry I haven't connected with APPLE yet, I'm working on it.\n
+Lo siento, aún no me he conectado con APPLE, estoy trabajando en ello.
+`);
+})
