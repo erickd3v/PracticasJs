@@ -5,19 +5,21 @@
     --background-main: #E8F1FD;
     --background-section: #FFFFFF;
     --border-input: #C8D1E5;
+    --button-color: #4968AD;
+    --border-button: #1E2C4B;
 
             /* Fonts */
         /* Family */
     --Family: 'Mulish', sans-serif;
         /* Weights */
-    --Weight-title-and-or-and-buttons: 800;
+    --Weight-title-and-or-and-buttons: 700;
     --Weight-first-text-and-inputs: 600;
     --Weight-last-text: 400;
         /* Size */
-    --size-title: 36px;
-    --size-or-and-buttons-and-inputs: 18px;
-    --size-first-text: 20px;
-    --size-last-text: 14px;
+    --size-title: 24px;
+    --size-or-and-buttons-and-inputs: 13px;
+    --size-first-text: 13px;
+    --size-last-text: 12px;
 }
 
 *{
@@ -35,13 +37,13 @@ body {
     display: flex;
     place-items: center;
     place-content: center;
+    font-family: var(--Family);
 }
 
 main {
     border-radius: 30px;
     background: var(--background-main);
-    height: 80%;
-    width: 80%;
+    width: 337px;
     display: flex;
     place-items: center;
     place-content: center;
@@ -49,11 +51,132 @@ main {
 
 section {
     background: var(--background-section);
-    width: 95%;
-    height: 95%;
     border-radius: 20px;
     box-shadow: 0px 22px 35px 0px rgba(5, 27, 105, 0.12);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 1em;
+    margin: 1em;
 }
 
+.title {
+    width: 60%;
+    text-align: center;
+    font-size: var(--size-title);
+    font-weight: var(--Weight-title-and-or-and-buttons);
+}
 
+.content {
+    text-align: center;
+    width: 100%;
+}
 
+.first_text {
+    font-size: var(--size-first-text);
+    padding-bottom: 1em;
+    font-weight: var(--Weight-first-text-and-inputs);
+}
+
+.or , .facebook {
+    font-size: var(--size-or-and-buttons-and-inputs);
+    margin-left: 1em;
+    width: 91%;
+    height: 40px;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    border-radius: 5px;
+    font-weight: var(--Weight-title-and-or-and-buttons);
+}
+
+.facebook {
+    color: var(--background-section);
+    background: var(--button-color);
+    border: none;
+}
+
+.facebook:hover {
+    cursor: pointer;
+    background-color: #7590CB;
+}
+
+.or {
+    opacity: 50%;
+}
+
+.content_create {
+    display: grid;
+    gap: 0.3em;
+}
+
+.inputFirstName, .inputLastName {
+    width: 117px;
+}
+
+.errorFirst, .errorEmail, .errorLast, .errorPass {
+    color: red;
+    font-size: 10px;
+}
+
+.inputFirstName {
+    grid-column: 1;
+}
+
+.errorFirst {
+    grid-column: 1;
+}
+
+.inputLastName {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.errorLast {
+    grid-column: 2;
+}
+
+.inputEmail, .errorEmail, .inputPass, .errorPass, .content_create_confirm {
+    grid-column: 1 / 3;
+}
+
+.inputFirstName, .inputLastName, .inputEmail, .inputPass {
+    border: 1px solid var(--border-input);
+    border-radius: 5px;
+    padding-left: 1em;
+    height: 40px;
+}
+
+.inputFirstName::placeholder, .inputLastName::placeholder, .inputEmail::placeholder, .inputPass::placeholder {
+    opacity: 50%;
+    font-family: var(--Family);
+    font-size: var(--size-or-and-buttons-and-inputs);
+    font-weight: var(--Weight-first-text-and-inputs);
+}
+
+.inputFirstName:focus, .inputLastName:focus, .inputEmail:focus, .inputPass:focus {
+    outline: none;
+}
+
+.content_create_confirm {
+    border-radius: 5px;
+    border: 1px solid var(--border-button);
+    height: 40px;
+    background: var(--border-button);
+    color: var(--background-section);
+    font-size: var(--size-or-and-buttons-and-inputs);
+    font-weight: var(--Weight-title-and-or-and-buttons);
+}
+
+.content_create_confirm:hover {
+    cursor: pointer;
+    background-color: #344364;
+}
+
+.last_text {
+    text-align: center;
+    font-size: var(--size-last-text);
+    font-weight: var(--Weight-last-text);
+    width: 210px;
+}

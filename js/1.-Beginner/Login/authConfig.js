@@ -1,3 +1,5 @@
+require('dotenv').config();
+// import 'dotenv' from .env;
 /**
  * Configuration object to be passed to MSAL instance on creation. 
  * For a full list of MSAL.js configuration parameters, visit:
@@ -6,11 +8,11 @@
 const msalConfig = {
     auth: {
         // 'Application (client) ID' of app registration in Azure portal - this value is a GUID
-        clientId: "4387a29e-6717-4e46-84b1-a29e1506bef8",
+        clientId: process.env.CLIENT_ID,
         // Full directory URL, in the form of https://login.microsoftonline.com/<tenant-id>
-        authority: "https://login.microsoftonline.com/common",
+        authority: process.env.AUTHORITY,
         // Full redirect URL, in form of http://localhost:3000
-        redirectUri: "https://erick150-ymf.github.io/PracticasJs/js/1.-Beginner/Login/index.html",
+        redirectUri: process.env.URL_LOCAL,
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
