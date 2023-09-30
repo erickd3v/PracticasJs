@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     box-sizing: border-box;
     margin: 0;
@@ -27,4 +28,35 @@ section {
 
 img {
     width: 100%;
+=======
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 1em;
+}
+
+.JS {
+    margin: auto;
+    padding-top: 1em;
+    display: flex;
+    gap: 0.5em;
+}
+
+.JS_project {
+    border: 1px solid;
+    padding: 1em;
+}
+
+.JS_text {
+    font-size: 18px;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+>>>>>>> origin
 }
