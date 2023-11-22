@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardar datos en Json</title>
+</head>
+<body>
+    <h1>Hola</h1>
+    <form action="/enviar-formulario" method="post" enctype="multipart/form-data">
+        <input type="text" placeholder="Tile" id="title" name="title">
+        <small>Introduce the title</small>
+        <textarea name="text" id="text" placeholder="Paragraph"></textarea>
+        <input type="file" id="image" name="image" accept="image/*">
+        <small>Introduce the content</small>
+        <button type="submit">Send Book</button>
+    </form>
+    <script src="./app.js"></script>
+</body>
+</html>

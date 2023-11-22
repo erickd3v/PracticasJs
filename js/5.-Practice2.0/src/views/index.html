@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Upload Image</h1>
+
+    <form action="/enviar-formulario" method="post" enctype="multipart/form-data">
+        <label for="title">Titulo:</label>
+        <input type="text" name="title" id="title">
+        <label for="text1">Texto:</label>
+        <input type="text" name="text" id="text1">
+        <input type="file" name="image" id="image" accept="image/*">
+        <label for="beta">beta</label>
+        <input type="text" name="text" id="beta">
+        <button type="submit">Upload</button>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
