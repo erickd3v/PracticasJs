@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login of User</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://accounts.google.com/gsi/client" onload="initClient()" async defer></script>
+</head>
+<body>
+    <main>
+        <h1 class="title">Log in</h1>
+        <div class="dates">
+            <div class="dates_insert">
+                <div class="email">
+                    <input class="inputEmail" type="text" placeholder="Enter email">
+                    <div class="Emailerror"></div>
+                </div>
+                <div class="pass">
+                    <input class="inputPass" type="password" placeholder="Enter password">
+                    <div class="Passerror"></div>
+                </div>
+                <button class="logIn">Log in</button>
+            </div>
+            <p class="or">OR</p>
+            <div class="dates_alternatives">
+                <button class="optionGoogle" onclick="getToken();"><img src="./svg/google.svg" alt="Google">Continue with Google</button>
+                <button class="optionMicrosoft"><img src="./svg/microsoft.svg" alt="Microsoft">Continue with Microsoft</button>
+                <button class="optionApple"><img src="./svg/apple.svg" alt="Apple">Continue with Apple</button>
+            </div>
+        </div>
+        <div class="p">
+            <p class="alternative">Can't log in? 
+                <div class="p_text"><li></li><span>Already have an account?</span></div>
+            </p>
+        </div>
+    </main>
+    <script src="./login.js"></script>
+    <!-- <button onclick="revokeToken();">Revoke token</button> -->
+    </script>
+</body>
